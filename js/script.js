@@ -1,21 +1,23 @@
 const header = document.querySelector("header");
-window.addEventListener("scroll", function () {
+const menu = document.querySelector("#menu-icon");
+const navlist = document.querySelector(".navlist");
+
+// Tambahkan class "sticky" saat menggulir
+window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY > 120);
 });
 
-// Navigation bar menu
-let menu = document.querySelector("#menu-icon");
-let navlist = document.querySelector(".navlist");
-
-menu.onclick = () => {
+// Toggle menu ketika tombol menu di klik
+menu.addEventListener("click", () => {
   menu.classList.toggle("bx-x");
   navlist.classList.toggle("active");
-};
+});
 
-window.onscroll = () => {
+// Sembunyikan menu saat menggulir
+window.addEventListener("scroll", () => {
   menu.classList.remove("bx-x");
   navlist.classList.remove("active");
-};
+});
 
 // Animation
 
