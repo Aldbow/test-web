@@ -647,7 +647,7 @@ form .send-btn:hover {
     position: absolute;
     top: 100%;
     right: -100%;
-    width: 255px;
+    width: 100%;
     min-height: 100vh;
     flex-direction: column;
     background: var(--bg-color);
