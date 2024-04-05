@@ -8,15 +8,11 @@
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 :root {
   --text-color: #fff;
-  --bg-color: #1b1f24;
-  --second-bg-color: #22282f;
-  --main-color: #13bbff;
+  --bg-color: #111111;
+  --second-bg-color: #1b1f24;
+  --main-color: #00a19c;
   --other-color: #c3cad5;
 
   --h1-font: 4.5rem;
@@ -27,11 +23,13 @@ body {
 body {
   color: var(--text-color);
   background: var(--bg-color);
+  overflow-x: hidden;
 }
 
 header {
   position: fixed;
   width: 100%;
+  min-width: 100%;
   top: 0;
   right: 0;
   z-index: 9999;
@@ -97,11 +95,12 @@ span {
 
 section {
   padding: 110px 14% 90px;
+  max-width: 100%;
 }
 
 .hero {
   height: 100vh;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -768,10 +767,45 @@ footer {
   .navlist.active {
     right: 0;
   }
+
+  footer {
+    padding: 18px 5%;
+  }
+
+  .footer-container {
+    width: 90%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-item .logo {
+    margin-bottom: 1rem;
+  }
+
+  .footer-social {
+    margin-top: 1rem;
+  }
+
+  .footer-item ul {
+    text-align: center;
+  }
+
+  .footer-item ul li {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 680px) {
   .main-content p {
+    width: 100%;
+  }
+
+  .footer-container {
     width: 100%;
   }
 }
